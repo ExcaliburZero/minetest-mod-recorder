@@ -8,6 +8,7 @@ A set of python scripts for making a data file with information on Minetest mods
 ##Mod Info
 Each mod has entries for the following information:
 - Name
+- Folder Name
 - Author
 - Dependencies
 - Forum Topic

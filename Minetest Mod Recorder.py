@@ -6,7 +6,8 @@ Minetest Mod Recorder Program
 import json
 
 #Get info of Mod
-name = input("Name (lowercase): ") #Get name of mod
+name = input("Name: ") #Get name of mod
+folder = input("Folder Name: ") #Get name of the folder of the mod
 author = input("Main Author: ") #Get main author of mod
 depends = [] # Create depends list
 
@@ -37,6 +38,7 @@ if gitHub == "0":
 #Print mod information
 print("\n====Mod Info====")
 print("Name: " + name)
+print("Folder Name: " + folder)
 print("Author: " + author)
 print("Dependencies: " + ", ".join(depends))
 print("Forum Topic: " + forum)
@@ -44,7 +46,7 @@ print("Mod Database: " + database)
 print("GitHub Repo: " + gitHub)
 
 #Assemble new mod dictionary
-mod = {"Name": name, "Author": author, "Depends": ", ".join(depends), "Forum": forum, "Database": database, "GitHub": gitHub}
+mod = {"Name": name, "Folder": folder, "Author": author, "Depends": ", ".join(depends), "Forum": forum, "Database": database, "GitHub": gitHub}
 
 #Open data file and get master directory from data file
 data_file = "Mod_Data.txt"
