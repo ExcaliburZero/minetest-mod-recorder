@@ -49,7 +49,7 @@ print("GitHub Repo: " + gitHub)
 mod = {"Name": name, "Folder": folder, "Author": author, "Depends": ", ".join(depends), "Forum": forum, "Database": database, "GitHub": gitHub}
 
 #Open data file and get master directory from data file
-data_file = "Mod_Data.txt"
+data_file = "mod_data.txt"
 master_dict = {}
 master_dict = json.load(open(data_file))
 
