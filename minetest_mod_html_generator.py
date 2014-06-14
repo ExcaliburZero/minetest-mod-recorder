@@ -62,7 +62,7 @@ def writeHTML():
     html_code.append("</div></body></html>")
 
     #Create HTML file
-    html_file = open("Mod List.html", "w")
+    html_file = open("mod_list.html", "w")
 
     #Write to HTML file
     html_file.write(str.join("\n", html_code))
@@ -74,7 +74,7 @@ def writeHTML():
     html_file.close()
 
 #Open data file and get master directory from data file
-data_file = "Mod_Data.txt"
+data_file = "mod_data.txt"
 global master_dict
 master_dict = {}
 master_dict = json.load(open(data_file))
