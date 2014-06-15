@@ -29,10 +29,22 @@ def writeHTML():
     #Prints general beginning HTML
     #Note that "style.css" can be used to style the generated page
     html_code.append("<html><title>List of Mods</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /><body><div id=\"holder\">")
+
+    #Outputs Table of Contents
+    html_code.append("<h2>Table of Contents</h2>")
+    html_code.append("<ul>")
+    
+    for modName, mod in sorted(master_dict.items()):
+        html_code.append("<li><a href=\"#" + mod["Name"] + "\">" + mod["Name"] + "</a> - (" + mod["Folder"] + ")" + "</li>")
+
+    html_code.append("</ul>")
+
+    #Ouputs list header
+    html_code.append("<h2>List of Mods</h2>")
     
     #Prints info for each mod in alphabetical order
     for modName, mod in sorted(master_dict.items()):
-        html_code.append("<h3>" + mod["Name"] + "</h3>")
+        html_code.append("<h3 id=\"" + mod["Name"] + "\">" + mod["Name"] + "</h3>")
         html_code.append("<ul>")
         html_code.append("<li>" + "Folder Name: " + mod["Folder"] + "</li>")
         html_code.append("<li>" + "Author: " + mod["Author"] + "</li>")
