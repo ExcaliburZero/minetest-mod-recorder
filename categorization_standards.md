@@ -3,6 +3,7 @@ These are the standards for categorizing mods using the Minetest Mod Recorder.
 
 ##Categories
 - Admin - A mod which supplies features, tools, items, or nodes for the specific purpose of being used by server administrators.
+- Entities - A mod which supplies mobs, npcs, or other entities. 
 - GUI - A mod which supplies or alters a graphical user interface.
 - Objects - A mod which supplies objects or items. Objects an items do not include tools, see the definition of the "Tools" category.
 - Mapgen - A mod which alters the way in which worlds are generated. This is considered to be so when a mod adds new types of map generation or alters currently existing map generation through the addition or changing of plants, trees, biomes, etc..

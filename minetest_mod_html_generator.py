@@ -19,6 +19,7 @@ def extractMod(mod):
     forum = mod["Forum"]
     database = mod["Database"]
     gitHub = mod["GitHub"]
+    categories = mod["Categories"]
 
 #Wrtie HTML code from mod list
 def writeHTML():
@@ -55,6 +56,7 @@ def writeHTML():
             html_code.append("<li>" + "GitHub Repo: " + "<a href=\"" + mod["GitHub"] + "\">" + mod["GitHub"] + "</a>" + "</li>")
         else:
             html_code.append("<li>" + "GitHub Repo: None</li>")
+        html_code.append("<li>" + "Categories: " + mod["Categories"] + "</li>")
         html_code.append("</ul>")
         html_code.append("</br>")
 

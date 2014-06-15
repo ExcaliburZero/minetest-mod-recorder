@@ -35,6 +35,16 @@ gitHub = input("Main GitHub Repo (0 if none): ")
 if gitHub == "0":
     gitHub = "None"
 
+#Get mod's categories
+categories = [] # Create categories list
+i = 0
+while i == 0:
+    entered = input("Categories (0 when done): ")
+    if entered != "0":
+        categories.append(entered) #Add depend to list
+    else:
+        i = 1 #End while loop
+
 #Print mod information
 print("\n====Mod Info====")
 print("Name: " + name)
@@ -44,9 +54,10 @@ print("Dependencies: " + ", ".join(depends))
 print("Forum Topic: " + forum)
 print("Mod Database: " + database)
 print("GitHub Repo: " + gitHub)
+print("Categories: " + ", ".join(categories))
 
 #Assemble new mod dictionary
-mod = {"Name": name, "Folder": folder, "Author": author, "Depends": ", ".join(depends), "Forum": forum, "Database": database, "GitHub": gitHub}
+mod = {"Name": name, "Folder": folder, "Author": author, "Depends": ", ".join(depends), "Forum": forum, "Database": database, "GitHub": gitHub, "Categories": ", ".join(categories)}
 
 #Open data file and get master directory from data file
 data_file = "mod_data.txt"
