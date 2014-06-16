@@ -44,7 +44,7 @@ def writeHTML():
     
     #Prints info for each mod in alphabetical order
     for modName, mod in sorted(master_dict.items()):
-        html_code.append("<h3 id=\"" + mod["Name"] + "\">" + mod["Name"] + "</h3>")
+        html_code.append("<h3 id=\"" + mod["Name"] + "\">" + mod["Name"] + " [" + mod["Folder"] + "]</h3>")
         html_code.append("<ul>")
         html_code.append("<li>" + "Folder Name: " + mod["Folder"] + "</li>")
         html_code.append("<li>" + "Author: " + mod["Author"] + "</li>")
