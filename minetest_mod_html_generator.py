@@ -28,6 +28,7 @@ def writeHTML():
     
     #Prints general beginning HTML
     #Note that "style.css" can be used to style the generated page
+    html_code.append("<!DOCTYPE html>")
     html_code.append("<html><title>List of Mods</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /><body><div id=\"holder\">")
 
     #Outputs Table of Contents
