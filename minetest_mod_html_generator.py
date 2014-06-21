@@ -32,6 +32,7 @@ def writeHTML():
     html_code.append("<html><title>List of Mods</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /><body><div id=\"holder\">")
 
     #Outputs Table of Contents
+    html_code.append("<div id=\"TableOfContents\">")
     html_code.append("<h2 id=\"TOC\">Table of Contents</h2>")
     html_code.append("<ul>")
     
@@ -39,6 +40,7 @@ def writeHTML():
         html_code.append("<li><a href=\"#" + mod["Name"] + "\">" + mod["Name"] + "</a> - (" + mod["Folder"] + ")" + "</li>")
 
     html_code.append("</ul>")
+    html_code.append("</div>")
 
     #Ouputs list header
     html_code.append("<h2 id=\"Mod List Header\">List of Mods</h2>")
