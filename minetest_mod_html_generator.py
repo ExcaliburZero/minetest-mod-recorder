@@ -51,7 +51,11 @@ def writeHTML():
         html_code.append("<ul>")
         html_code.append("<li>" + "Folder Name: " + mod["Folder"] + "</li>")
         html_code.append("<li>" + "Author: " + mod["Author"] + "</li>")
-        html_code.append("<li>" + "Depends: " + mod["Depends"] + "</li>")
+
+        if mod["Depends"] != "":
+            html_code.append("<li>" + "Depends: " + mod["Depends"] + "</li>")
+        else:
+            html_code.append("<li>" + "Depends: None</li>")
         
         #Prints values that are links as HTML links
         #Forum Topic
